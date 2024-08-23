@@ -2,6 +2,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+IMAGES_ROOT = BASE_DIR / "images"
+
 DEFAULT_APP = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -12,6 +14,10 @@ DEFAULT_APP = [
 ]
 CREATED_APP = [
     "apps.core.apps.CoreConfig",
+    "apps.product",
+    "apps.customer",
+    "apps.purchase",
+    "apps.review"
 ]  # custom apps goe here
 
 THIRD_PARTY_APP = ['rest_framework',]  # third party apps goe here
