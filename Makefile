@@ -5,7 +5,7 @@ dev-startapp:
 dev-migrate:
 	python3 manage.py migrate --settings=config.settings.dev
 dev-makemigrations:
-	python3 manage.py makemigrations review --settings=config.settings.dev
+	python3 manage.py makemigrations --settings=config.settings.dev
 dev-shell:
 	python3 manage.py shell --settings=config.settings.dev
 dev-shell-plus:
