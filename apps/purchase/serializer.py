@@ -12,4 +12,4 @@ class CartSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Cart
-        fields = '_all_'
+        fields = '__all__'
