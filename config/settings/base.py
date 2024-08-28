@@ -17,7 +17,7 @@ CREATED_APP = [
     "apps.product",
     "apps.customer",
     "apps.purchase",
-    "apps.review"
+    "apps.review",
 ]  # custom apps goe here
 
 THIRD_PARTY_APP = ['rest_framework',]  # third party apps goe here

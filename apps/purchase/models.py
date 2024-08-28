@@ -28,3 +28,6 @@ class Cart(models.Model):
     
     def get_total_amount(self):
         return  self.quantity * self.product_id.price
+    
+    def __str__(self):
+        return f'Customer ID : {self.customer_id}, Product ID : {self.product_id}, QTY {self.quantity}'

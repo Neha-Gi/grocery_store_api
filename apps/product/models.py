@@ -23,4 +23,5 @@ class Product(models.Model):
     # unit = models.CharField(max_length=3, choices=UNIT_CHOICES, default="kg")
 
     def __str__(self):
-        return {self.name}
+        return self.name  # wthout{}, otherwise it returns a set 
+
