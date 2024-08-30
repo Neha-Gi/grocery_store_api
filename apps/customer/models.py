@@ -11,5 +11,3 @@ class Customer(models.Model):
     address = models.CharField(max_length=255, blank=True, null=True)
     date_of_birth = models.DateField(blank=True, null=True)
     # Add other custom fields here as needed
-
-  
