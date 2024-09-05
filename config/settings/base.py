@@ -1,4 +1,5 @@
 from pathlib import Path
+from datetime import timedelta
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -20,7 +21,10 @@ CREATED_APP = [
     "apps.review",
 ]  # custom apps goe here
 
-THIRD_PARTY_APP = ['rest_framework',]  # third party apps goe here
+THIRD_PARTY_APP = [
+    'rest_framework',
+    'rest_framework_simplejwt',
+    ]  # third party apps goe here
 
 INSTALLED_APPS = [*DEFAULT_APP, *CREATED_APP, *THIRD_PARTY_APP]
 
@@ -81,3 +85,18 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME':timedelta(days=15),
+    'REFRESH_TOKEN_LIFETIME':timedelta(days=1),
+    'BLACKLIST_AFTER_ROTATION':True,
+    'AUTH_HEADER_TYPES':('Bearer',),
+    'AUTH_TOKEN_CLASSES':("rest_framework_simplejwt.tokens.AccessToken", ),
+}
