@@ -11,13 +11,24 @@ from apps.purchase.serializer import CartSerializer, OrderItemSerializer, OrderS
 from apps.product.models import Product
 
 #Function-base view
+# @api_view(['GET']) # by default , it uses a 'GET' method
+# def view_cart(request):
+#     # Get all items using ORM
+#     cart = Cart.objects.all()
+
+#     # Deserialize using the CartSerializer
+#     data = CartSerializer(cart,many=True)
+
+#     return Response(data.data, status=status.HTTP_200_OK)
+
 @api_view(['GET']) # by default , it uses a 'GET' method
+@permission_classes([IsAuthenticated])
 def view_cart(request):
     # Get all items using ORM
-    cart = Cart.objects.all()
+    cart = ItemTest.objects.all()
 
     # Deserialize using the CartSerializer
-    data = CartSerializer(cart,many=True)
+    data = OrderItemSerializer(cart,many=True)
 
     return Response(data.data, status=status.HTTP_200_OK)
 
