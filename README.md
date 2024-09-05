@@ -1,16 +1,19 @@
-# django-boilerplate
+# grocery-store-api
 
-Are you tired of going through the same process whenever you want to start a new project in Django? To set up a production standard Django project can be overwhelming at times.
 
-Here, I present to you this boilerplate that set up an enterprise standard Django project using latest version of Django
+This API allows you to place a grocery order which will be ready for pick-up in the store.
+
+The API is available at https://github.com/jendroo/grocery_store_api.git
+
+Here, I present to you this grocery-store-api that set up an enterprise standard django-rest-api project using latest version of Django
 
 ## Note
 `make dev-install` will install `Django~=5.0`, which ensures security update for Django version 5.
 
 ## Set Up
 
-- Clone the repo `git clone https://github.com/Eyongkevin/django-boilerplate.git`
-- Change the project name to your own project name: `mv django-boilerplate/ <your-project-name>`
+- Clone the repo `git clone https://github.com/jendroo/grocery_store_api.git`  
+- Change the project name to your own project name: `mv grocery-store-api/ <your-project-name>`
 - Add an `.env` file with the following configurations
 
 ```
@@ -25,7 +28,7 @@ DB_PORT=5432
 ### Using sqlite3
 
 - If you want to use `sqlite3` as your database, then just the `SECRET_KEY` is required.
-- The boilerplate is configured to use postgresql by default. So, to switch to sqlite3, move to the development settings at [config/settings/dev.py](https://github.com/Eyongkevin/django-boilerplate/blob/main/config/settings/dev.py) and adjust the database for sqlite3 by uncommenting for sqlite3 and commenting for postgresql.
+- The grocery-rest-api  is configured to use postgresql by default. So, to switch to sqlite3, move to the development settings at [config/settings/dev.py](git clone https://github.com/jendroo/grocery_store_api/config/settings/dev.py) and adjust the database for sqlite3 by uncommenting for sqlite3 and commenting for postgresql.
 
 #### Generate your SECRET_KEY
 
@@ -68,10 +71,10 @@ CREATE DATABASE <db-name>;
 
 ### Create new repo
 
-If you clone the boilerplate, the git remote will reference this boilerplate. So, to reference your own repo, you can do a few things;
+If you clone the grocery-store-api, the git remote will reference this grocery-store-api. So, to reference your own repo, you can do a few things;
 
 - Create a new repo on github, don't add anything like README.
-- Update the remote of this boilerplate to reference the new repo you just created.
+- Update the remote of this grocery-store-api to reference the new repo you just created.
 
 ```bash
 git remote set-url origin <your-repo-url>.git
@@ -84,7 +87,7 @@ git remote set-url origin <your-repo-url>.git
 
 ### Settings
 
-In the `config/` folder, we have another folder; `settings/` that contains all the settings based on the environment you are running at. This boilerplate has two; `base.py` and `dev.py`. If you are developing locally, you will be using the `dev.py`. If you want to go to production, then you can create a setting for production. For example `prod.py`
+In the `config/` folder, we have another folder; `settings/` that contains all the settings based on the environment you are running at. This grocery-store-api  has two; `base.py` and `dev.py`. If you are developing locally, you will be using the `dev.py`. If you want to go to production, then you can create a setting for production. For example `prod.py`
 
 ### Requirements
 
@@ -92,7 +95,7 @@ Just like settings, we have a folder `requirements/` that contains requirement f
 
 ### Apps
 
-All django applications should be created in the `apps/` folder. This way, all apps are grouped and easy to find.
+All grocery-store applications should be created in the `apps/` folder. This way, all apps are grouped and easy to find.
 
 To create a new app, we do the following;
 
