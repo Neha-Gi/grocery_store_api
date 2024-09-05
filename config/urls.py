@@ -18,16 +18,11 @@ from django.contrib import admin
 
 from django.urls import path, include
 from rest_framework_simplejwt.views import TokenObtainPairView
-
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/v1/cart/',include('apps.purchase.urls',namespace = 'cart-urls')),
     path("api/v1/product/", include("apps.product.urls", namespace='product-url')),
-
-    path("review/", include("apps.review.urls"))
-
     path("api/v1/customer/", include("apps.customer.urls", namespace='customer-urls')),
     path("api/v1/token/", TokenObtainPairView.as_view()),
     path('api/v1/purchase/',include('apps.purchase.urls',namespace = 'purchase-urls')),
-
 ]
